@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing Node.js dependencies
+  pre_build:
+    commands:
+      - echo Pre-build step
+  build:
+    commands:
+      - echo Build step
+  post_build:
+    commands:
+      - echo Post-build step
+
+artifacts:
+  files:
+    - index.html
+    - server.js
+  discard-paths: yes
